@@ -1,0 +1,179 @@
+.red-section {
+  background-color: #a00;
+  color: white;
+  text-align: center;
+  padding: 4rem 2rem;
+  width: 100%;
+}
+
+.features-horizontal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+}
+
+.tick-icon {
+  width: 40px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+.franchise-section {
+  padding: 4rem 2rem;
+}
+
+.franchise-menu {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #ccc;
+}
+
+.franchise-menu button {
+  background-color: #a00;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.franchise-menu button.active {
+  background-color: white;
+  color: #a00;
+  border: 2px solid #a00;
+}
+
+.franchise-title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.franchise-description {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+}
+
+.franchise-split {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.franchise-left {
+  flex: 1;
+  min-width: 250px;
+}
+
+.franchise-right {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+}
+
+.franchise-right img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.franchise-attractions {
+  font-style: italic;
+  margin-top: 1rem;
+}
+
+.franchise-order {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.franchise-order a {
+  background: #a00;
+  color: white;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.cta-big-logo {
+  background-color: #fff;
+  text-align: center;
+  padding: 6rem 2rem;
+}
+
+.cta-logo {
+  max-width: 100%;
+  width: 200px;
+  height: auto;
+  margin-bottom: 3rem;
+}
+
+.cta-title {
+  color: #a00;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.cta-text {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.cta-btn {
+  background-color: #a00;
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: white;
+  color: #a00;
+  border: 2px solid #a00;
+}
+
+@media (max-width: 768px) {
+  .features-horizontal {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .feature-item {
+    width: 45%;
+  }
+  .cta-logo {
+    width: 150px;
+  }
+
+  .cta-title {
+    font-size: 2rem;
+  }
+  .responsive-paragraph {
+      width: 100% !important;
+    }
+}

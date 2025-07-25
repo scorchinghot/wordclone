@@ -1,0 +1,281 @@
+.hero-franchise {
+  position: relative;
+  height: 100vh;
+}
+.hero-franchise .hero-overlay {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  padding: 1rem;
+}
+.hero-franchise h1 {
+  font-size: 2rem;
+}
+.t-center {   
+  margin-top: 10rem;
+  font-size: 3rem !important;
+}
+.p-center {   
+  width: auto;
+  margin: 0 auto;
+}
+.split {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: center;
+}
+.split-half {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+
+.half {
+  flex: 1 1 50%;
+  padding: 3rem;
+  box-sizing: border-box;
+}
+
+.img-half img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.text-half {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text-half h2 {
+  font-size: 2.5rem;
+  color: #111;
+  margin-bottom: 1rem;
+}
+.sm {
+  width: auto;
+  height: 75px;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+.text-half p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+.img-block img {
+  width: 100%;
+  max-width: 500px;
+}
+.stats-section {
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem 0;
+  text-align: center;
+}
+.red { color: #a00; }
+.red-light { background: #ffe5e5; border: 4px solid #a00; padding: 1rem; }
+.white { background: white; border: 2px solid #a00; padding: 1rem; }
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem 0;
+  width: 70%;
+  margin: 0 auto;
+}
+.process-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: nowrap; 
+  overflow-x: auto;   
+  padding: 2rem 0;
+}
+
+.process-grid > div {
+  flex: 1;
+  text-align: center;
+  padding: 1rem;
+}
+
+.process-grid h1 {
+  font-size: 5rem;
+  margin-bottom: 0.5rem;
+}
+
+.process-grid h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.process-grid p {
+  font-size: 0.95rem;
+}
+
+.faq-section {
+  padding: 2rem 0;
+  text-align: center;
+}
+.rem {
+  font-size: 2rem;
+}
+.center {
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  font-size: 3rem;
+  font-weight: normal;
+}
+.faq-section {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.faq-item {
+  width: 80%;
+  margin: 1rem auto;
+  border: 2px solid #a00;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.faq-box {
+  background-color: #a00;
+  color: white;
+  padding: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+}
+
+.faq-answer {
+  display: none;
+  background-color: white;
+  color: black;
+  padding: 1rem;
+  text-align: left;
+}
+
+/* Active state when open */
+.faq-item.active .faq-box {
+  background-color: white;
+  color: #a00;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+.centered-section {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+.cursive {
+  font-size: 2.5rem;
+}
+.btn {
+  background: #a00;
+  color: white;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-align: center;
+  display: inline-block;
+  white-space: nowrap;   
+}
+.btn-wrapper {
+  text-align: left; 
+  margin-top: 1rem;
+}
+.btn:hover {
+  background-color: white;
+  color: #a00;
+  border: 2px solid #a00;
+}
+.center-btn {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+.investment-split {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.investment-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 80%; 
+}
+
+.investment-box {
+  padding: 2rem;
+  border: 4px solid #a00;
+  border-radius: 30px;
+  background-color: white;
+}
+
+.red-light {
+  background-color: #fee;
+}
+.disclaimer {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  font-weight: bold;
+  margin-bottom: 4rem;
+}
+
+.investment-breakdown {
+  border: 2px solid #a00;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  background-color: #fff;
+  border-radius: 30px;
+}
+
+.investment-breakdown h4 {
+  margin-bottom: 1rem;
+  color: #a00;
+}
+.white {
+  background-color: #fff;
+}
+@media (min-width: 768px) {
+  .investment-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .investment-box {
+    width: 48%;
+  }
+  .rem {
+  font-size: 4.2rem;
+}
+.p-center {   
+  width: 60%;
+  margin: 0 auto;
+}
+.process-grid > div {
+    min-width: 200px;
+  }
+  .hero-franchise h1 {
+  font-size: 4rem;
+}
+}

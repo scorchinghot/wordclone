@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      text-align: center;
+      padding: 30px 20px 10px;
+    }
+    header h1 {
+      font-size: 28px;
+      margin: 0;
+    }
+    header h2 {
+      font-size: 18px;
+      font-weight: normal;
+      margin: 5px 0 20px;
+    }
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .buttons button {
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .order-btn {
+      background-color: #c1272d;
+      color: #fff;
+    }
+    .location-btn {
+      background-color: #fff;
+      border: 2px solid #c1272d;
+      color: #c1272d;
+    }
+    .snav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      padding: 10px;
+      gap: 15px;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    .menu-container {
+      width: 80%;
+      background-color: #f3f4f6;
+      padding: 20px;
+      margin: 20px auto;
+      box-sizing: border-box;
+      border-radius: 10px;
+    }
+    h2 {
+      text-align: center;
+    }
+    .section-description {
+      text-align: center;
+      font-size: 1rem;
+      color: #555;
+      max-width: 600px;
+      margin: 0 auto 30px;
+      font-weight: bold;
+    }
+    .items {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      justify-items: center;
+    }
+    .item {
+      width: 100%;
+      background: #fff;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      text-align: center;
+      border-radius: 20px;
+      box-sizing: border-box;
+    }
+    .item:hover {
+      border: 2px solid #a00; 
+    }
+    .item img {
+      width: 100%;
+      height: auto;
+      object-fit: fill;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+    .item h3 {
+      margin: 10px 0 5px;
+      font-size: 16px;
+    }
+    .item p {
+      font-size: 14px;
+      color: #555;
+      margin: 0;
+    }
+    .footer-notes {
+      font-size: 12px;
+      color: #666;
+      text-align: center;
+      margin: 30px auto;
+      padding: 0 20px;
+      max-width: 600px;
+    }
+    .center {
+      text-align: center;
+      margin: 0 auto;
+      margin-top: 4rem;
+      margin-bottom: 1.5rem;
+      font-size: 3rem;
+    }
+    .red {
+      color: #c1272d;
+      font-weight: normal;
+      font-size: 1.5rem;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .btn {
+      background: #a00;
+      color: white;
+      padding: 0.8rem 2rem;
+      border: none;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      text-align: center;
+      display: inline-block; 
+      white-space: nowrap;   
+    }
+    .btn:hover {
+      background-color: white;
+      color: #a00;
+      border: 2px solid #a00;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <a href="index.html">
+      <img src="assets/logos/logo.png" alt="Logo" class="logo" />
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="locations.html">LOCATIONS</a></li>
+          <li><a href="nmenu.html">MENU</a></li>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><a href="franchise.html">FRANCHISE</a></li>
+          <li><a href="shop.html">SHOP</a></li>
+          <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+        <button class="menu-toggle" id="menu-toggle">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+    <ul class="mobile-menu" id="mobile-menu">
+      <li><a href="locations.html">LOCATIONS</a></li>
+          <li><a href="nmenu.html">MENU</a></li>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><a href="franchise.html">FRANCHISE</a></li>
+          <li><a href="shop.html">SHOP</a></li>
+          <li><a href="contact.html">CONTACT US</a></li>
+    </ul>
+  </header>
+
+  <section>
+    <h1 class="center"><span class="script-font" style="font-weight: bold; font-size: 4rem; margin: 0 auto;">Our</span> MENU</h1>
+    <h2 class="red script-font" style="margin: 0 auto !important; margin-bottom: 2rem !important;">Seafood Boil</h2>
+    <div class="buttons">
+      <a href="https://direct.chownow.com/order/25448/locations">
+      <button class="btn">Order Now</button>
+      </a>
+      <a href="locations.html">
+      <button class="location-btn">Find a Location</button>
+      </a>
+    </div>
+  </section>
+
+  <nav class="snav">
+    <a href="#boiler">The Boiler</a>
+    <a href="#soup">Soup</a>
+    <a href="#sandwiches">Sandwiches</a>
+    <a href="#sides">Sides</a>
+    <a href="#fryer">The Fryer</a>
+    <a href="#captrisuns">Cap'trisuns</a>
+    <a href="#dessert">Dessert</a>
+    <a href="#lunch">Lunch Special</a>
+  </nav>
+
+  <div class="menu-container">
+    <h2 class="center" id="boiler">The Boiler</h2>
+    <p class="section-description">
+      Our Cajun seafood boil with your choice of seafood, sauce, and spice level. Served with corn & potato. *Seasonal items.
+    </p>
+    <div class="items">
+      <div class="item"><img src="assets/images/menu/im1.png" alt=""><h3>Fill Your Bag</h3><p>Custom seafood boil with your choice of seafood and sauce.</p></div>
+      <div class="item"><img src="assets/images/menu/im1.png" alt=""><h3>Pick 2 lbs Combo</h3><p>Pick two types of seafood for your combo.</p></div>
+      <div class="item"><img src="assets/images/menu/im2.png" alt=""><h3>Pick 3 lbs Combo</h3><p>Pick three types of seafood for your combo.</p></div>
+      <div class="item"><img src="assets/images/menu/im2.png" alt=""><h3>Pick 4 lbs Combo</h3><p>Pick four types of seafood for your combo.</p></div>
+    </div>
+    <h2 class="center" id="soup">SOUP</h2>
+    <div class="items">
+      <div class="item"><img src="assets/images/menu/im3.png" alt=""><h3>Jambalaya</h3><p>Rich and hearty Louisiana classic with andouille sausage.</p></div>
+      <div class="item"><img src="assets/images/menu/im4.png" alt=""><h3>New England Clam Chowder</h3><p>Creamy and comforting, packed with tender clams.</p></div>
+    </div>
+    <h2 class="center" id="sandwiches">Sandwiches</h2>
+    <p class="section-description">
+      Served with your choice of fries.
+    </p>
+    <div class="items">
+      <div class="item"><img src="assets/images/menu/im5.png" alt=""><h3>Po' Boy Sandwich</h3><p>Choice of fried: Shrimp, Chicken, Fish, Calamari, or Soft Shell Crab.</p></div>
+      <div class="item"><img src="assets/images/menu/im6.png" alt=""><h3>Lobster Roll</h3><p>Fresh lobster meat lightly dressed in a toasted roll.</p></div>
+    </div>
+    <h2 class="center" id="sides">Sides</h2>
+    <div class="items">
+      <div class="item"><img src="assets/images/menu/im7.png" alt=""><h3>Sausages</h3><p></p></div>
+      <div class="item"><img src="assets/images/menu/im8.png" alt=""><h3>Garlic Noodles</h3><p></p></div>
+      <div class="item"><img src="assets/images/menu/im9.png" alt=""><h3>Fries</h3><p>Regular, Lemon Pepper, Cajun, or Sweet Potato.</p></div>
+      <div class="item"><img src="assets/images/menu/im10.png" alt=""><h3>Broccoli</h3><p></p></div>
+      <div class="item"><img src="assets/images/menu/im11.png" alt=""><h3>Garlic Bread (3)</h3><p></p></div>
+      <div class="item"><img src="assets/images/menu/im12.png" alt=""><h3>Corn on the Cob (3)</h3><p></p></div>
+      <div class="item"><img src="assets/images/menu/im13.png" alt=""><h3>Potatoes (4)</h3><p></p></div>
+      <div class="item"><img src="assets/images/menu/im14.png" alt=""><h3>Boiled Eggs (3)</h3><p></p></div>
+      <div class="item"><img src="assets/images/menu/im15.png" alt=""><h3>Steamed Rice</h3><p></p></div>
+      <div class="item"><img src="assets/images/menu/im16.png" alt=""><h3>Extra Sauce (8 oz)</h3><p></p></div>
+      <div class="item"><img src="assets/images/menu/im17.png" alt=""><h3>Little Cap't Kids Meal</h3><p>Chicken Tender (1) or Fish Finger (1), yogurt, mini corn dog, mac & cheese.</p></div>
+    </div>
+    <h2 class="center" id="fryer">The Fryer</h2>
+    <p class="section-description">
+      Served with remoulade sauce and your choice of fries.
+    </p>
+    <div class="items">
+      <div class="item"><img src="assets/images/menu/im18.png" alt=""><h3>Soft Shell Crab Basket*</h3><p></p></div>
+      <div class="item"><img src="assets/images/menu/im19.png" alt=""><h3>Fish & Chips Basket</h3><p></p></div>
+      <div class="item"><img src="assets/images/menu/im20.png" alt=""><h3>Fried Shrimp Basket</h3><p></p></div>
+      <div class="item"><img src="assets/images/menu/im21.png" alt=""><h3>Calamari Basket</h3><p></p></div>
+      <div class="item"><img src="assets/images/menu/im22.png" alt=""><h3>Chicken Tenders Basket</h3><p></p></div>
+      <div class="item"><img src="assets/images/menu/im23.png" alt=""><h3>Wings Basket 🔥</h3><p>6 Piece / 12 Piece / 24 Piece</p></div>
+      <div class="item"><img src="assets/images/menu/im24.png" alt=""><h3>Fisherman's Platter</h3><p>Soft Shell Crab (1), Shrimp (6), Fish (2), Calamari (½ Cup).</p></div>
+    </div>
+    <h2 class="center" id="captrisuns">Cap'trisuns</h2>
+    <p class="section-description">
+      All of our Cap'trisun drinks are non-alcoholic.
+    </p>
+    <div class="items">
+      <div class="item"><img src="assets/images/menu/im25.png" alt=""><h3>Classic Lemonade</h3><p></p></div>
+      <div class="item"><img src="assets/images/menu/im26.png" alt=""><h3>Strawberry Lemonade</h3><p></p></div>
+      <div class="item"><img src="assets/images/menu/im27.png" alt=""><h3>Mr. Rich (Peach)</h3><p></p></div>
+      <div class="item"><img src="assets/images/menu/im28.png" alt=""><h3>Ms. Green (Green Apple)</h3><p></p></div>
+      <div class="item"><img src="assets/images/menu/im29.png" alt=""><h3>Dr. Yellow (Mango)</h3><p></p></div>
+      <div class="item"><img src="assets/images/menu/im30.png" alt=""><h3>Madam Berry (Raspberry)</h3><p></p></div>
+      <div class="item"><img src="assets/images/menu/im31.png" alt=""><h3>Piña Colada</h3><p></p></div>
+      <div class="item"><img src="assets/images/menu/im32.png" alt=""><h3>Shirley Temple</h3><p></p></div>
+    </div>
+    <h2 class="center" id="dessert">Dessert</h2>
+    <div class="items">
+      <div class="item"><img src="assets/images/menu/im33.png" alt=""><h3>Beignet (2 Pieces)</h3><p></p></div>
+      <div class="item"><img src="assets/images/menu/im34.png" alt=""><h3>Funnel Cake Fries</h3><p></p></div>
+    </div>
+    <h2 class="center" id="lunch">Lunch Special</h2>
+    <p class="section-description">
+      11:30 AM - 3:00 PM Monday through Friday. *Excluding holidays
+    </p>
+    <div class="items">
+      <div class="item"><img src="assets/images/menu/im35.png" alt=""><h3>Seafood Boiler Special</h3><p>Pick 2 seafood, sauce and a side. Includes: Clams, Shrimp, EZ Peel Shrimp, Mussels, or Crawfish.</p></div>
+      <div class="item"><img src="assets/images/menu/im36.png" alt=""><h3>Fried Basket Special</h3><p>Pick 1 protein and fries. Choice of: Shrimp, Calamari, Fish, Wings, or Tenders.</p></div>
+      <div class="item"><img src="assets/images/menu/im37.png" alt=""><h3>Po'Boy Meal</h3><p>Pick 1 po'boy sandwich and fries. Choice of: Shrimp, Calamari, Chicken, or Fish.</p></div>
+      <div class="item"><img src="assets/images/menu/im38.png" alt=""><h3>Cajun Pasta 🔥</h3><p>Garlic noodles with shrimp, mussels, and calamari in Cap't Loui sauce.</p></div>
+    </div>
+  </div>
+
+  <div class="footer-notes">
+    <p>* Before placing your order, please review our allergy information online or contact us with any questions about allergens.</p>
+    <p>* Prices are subject to change without notice.</p>
+    <p>* Consuming raw or undercooked meats, poultry, seafood, shellfish, or eggs may increase your risk of foodborne illness.</p>
+  </div>
+
+  <footer>
+    <div class="container">
+      <img src="assets/logos/footer logo.png" alt="Capt Loui Logo" class="footer-logo" />
+      <ul class="footer-nav">
+        <li><a href="locations.html">LOCATIONS</a></li>
+          <li><a href="nmenu.html">MENU</a></li>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><a href="franchise.html">FRANCHISE</a></li>
+          <li><a href="shop.html">SHOP</a></li>
+          <li><a href="contact.html">CONTACT US</a></li>
+      </ul>
+      <p>&copy; lorem lorem lorem </p>
+      <div class="social-icons">
+        <a href="#"><img src="assets/logos/facebook.png" alt="Facebook Icon" /></a>
+        <a href="#"><img src="assets/logos/insta.png" alt="Instagram Icon" /></a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>

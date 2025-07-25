@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>redacted</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 4rem;
+      margin-top: 6rem;
+    }
+
+    h1 span {
+      color: #a52a2a;
+      font-style: italic;
+    }
+
+    p.subtitle {
+      text-align: center;
+      color: #555;
+      margin-bottom: 40px;
+    }
+
+    .container {
+      background: #f3f4f6;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 1000px;
+      margin: 0 auto 10rem auto;
+    }
+
+    .section-title {
+      font-weight: normal;
+      font-size: 30px;
+      margin: 20px 0 10px;
+    }
+
+    .search-container {
+      background: #fff;
+      padding: 20px;
+      border: 1px solid #ccc;
+      text-align: center;
+      border-radius: 4px;
+    }
+
+    .search-container input {
+      padding: 10px;
+      width: 60%;
+      max-width: 400px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .map-container {
+      width: 100%;
+      height: 400px;
+      margin: 20px 0;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .state-section {
+      background: white;
+      margin-bottom: 10px;
+      border-radius: 4px;
+      box-shadow: 0 0 4px rgba(0,0,0,0.1);
+    }
+
+    .state-header {
+      padding: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid #eee;
+    }
+
+    .locations {
+      display: none;
+      padding: 10px 20px 20px 20px;
+    }
+
+    .locations.open.grid {
+      display: grid !important;
+    }
+
+    .locations.open:not(.grid) {
+      display: block !important;
+    }
+
+    .locations.grid {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .location-card {
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 15px;
+      background: #fff;
+    }
+
+    .location-card h4 {
+      margin: 0 0 5px;
+    }
+
+    .location-card small {
+      color: #888;
+    }
+
+    .btn {
+      background: #b42a2a;
+      color: white;
+      padding: 8px 12px;
+      margin: 5px 5px 0 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .btn-outline {
+      background: white;
+      color: #b42a2a;
+      border: 1px solid #b42a2a;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="loctainer header-container">
+      <a href="index.html">
+        <img src="assets/logos/nav logo.png" alt="Logo" class="logo" />
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="locations.html">LOCATIONS</a></li>
+          <li><a href="nmenu.html">MENU</a></li>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><a href="franchise.html">FRANCHISE</a></li>
+          <li><a href="shop.html">SHOP</a></li>
+          <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+        <button class="menu-toggle" id="menu-toggle">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+    <ul class="mobile-menu" id="mobile-menu">
+      <li><a href="locations.html">LOCATIONS</a></li>
+        <li><a href="nmenu.html">MENU</a></li>
+        <li><a href="about.html">ABOUT US</a></li>
+        <li><a href="franchise.html">FRANCHISE</a></li>
+        <li><a href="shop.html">SHOP</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
+    </ul>
+  </header>
+
+  <h1><span class="script-font" style="font-weight: bold; font-size: 4rem; margin: 0 auto;">Our</span> LOCATIONS</h1>
+  <p class="subtitle">Find your nearest lorem ipsum restaurant</p>
+
+  <div class="container">
+    <div class="search-container">
+      <div class="section-title">FIND LOCATIONS BY STATE</div>
+      <input type="text" id="stateSearch" placeholder="Enter state name (e.g., California, NY, Texas)..." />
+    </div>
+
+    <div class="section-title">Store Locations Map</div>
+    <div id="map" class="map-container"></div>
+
+    <div class="section-title">Browse by State</div>
+    <div id="locations-container"></div>
+  </div>
+
+  <footer>
+    <div class="loctainer">
+      <img src="assets/logos/footer logo.png" alt="Capt Loui Logo" class="footer-logo" />
+      <ul class="footer-nav">
+        <li><a href="locations.html">LOCATIONS</a></li>
+        <li><a href="nmenu.html">MENU</a></li>
+        <li><a href="about.html">ABOUT US</a></li>
+        <li><a href="franchise.html">FRANCHISE</a></li>
+        <li><a href="shop.html">SHOP</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
+      </ul>
+      <p>&copy; lorem lorem lorem </p>
+      <div class="social-icons">
+        <a href="#"><img src="assets/logos/facebook.png" alt="Facebook Icon" /></a>
+        <a href="https://www.instagram.com/captlouiusa"><img src="assets/logos/insta.png" alt="Instagram Icon" /></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" defer></script>
+  <script src="js/locations.js" defer></script>
+  <script src="js/menu.js" defer></script>
+</body>
+</html>

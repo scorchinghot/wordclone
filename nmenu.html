@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>lorem</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/nmenu.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <a href="index.html">
+      <img src="assets/logos/nav logo.png" alt="lorem Logo" class="logo" />
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="locations.html">LOCATIONS</a></li>
+          <li><a href="nmenu.html">MENU</a></li>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><a href="franchise.html">FRANCHISE</a></li>
+          <li><a href="shop.html">SHOP</a></li>
+          <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+        <button class="menu-toggle" id="menu-toggle">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+    <ul class="mobile-menu" id="mobile-menu">
+      <li><a href="locations.html">LOCATIONS</a></li>
+      <li><a href="nmenu.html">MENU</a></li>
+      <li><a href="about.html">ABOUT US</a></li>
+      <li><a href="franchise.html">FRANCHISE</a></li>
+      <li><a href="shop.html">SHOP</a></li>
+      <li><a href="contact.html">CONTACT US</a></li>
+    </ul>
+  </header>
+
+  <section class="main-content">
+    <img src="assets/images/shop/logo.png" alt="Logo" class="logo" />
+    <h1 class="main-title">OUR MENU</h1>
+    <div class="info-strip">
+      <div>Before placing your order, please review our allergy information or contact your local store with any requirements about the allergy.</div>
+      <div>Prices are subject to change without notice.</div>
+      <div>Consuming uncooked meat, poultry, seafood, shellfish, or eggs may increase your risk of foodborne illnesses.</div>
+    </div>
+  </section>
+
+  <div class="mobile-menu-wrapper">
+  <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+    ☰ MENU
+  </div>
+
+  <div class="side-menu-mobile" id="mobileMenu">
+    <ul>
+      <li onclick="loadSection('boiler')">THE BOILER</li>
+      <li onclick="loadSection('fryer')">THE FRYER</li>
+      <li onclick="loadSection('soup')">SOUP</li>
+      <li onclick="loadSection('sandwiches')">SANDWICHES</li>
+      <li onclick="loadSection('drinks')">DRINKS</li>
+      <li onclick="loadSection('dessert')">DESSERT</li>
+    </ul>
+  </div>
+</div>
+
+  <img src="assets/images/home/img3.png" alt="Background" class="page-bg" />
+  <div class="bg-overlay"></div>
+
+  <div class="layout main-content">
+    <nav class="side-menu">
+      <ul>
+        <li style="color: red; font-weight: bold; margin-bottom: 1.5em; text-align: center; font-size: 1.2rem;">MENU</li>
+        <li onclick="loadSection('boiler')">THE BOILER</li>
+        <li onclick="loadSection('fryer')">THE FRYER</li>
+        <li onclick="loadSection('soup')">SOUP</li>
+        <li onclick="loadSection('sandwiches')">SANDWICHES</li>
+        <li onclick="loadSection('drinks')">DRINKS</li>
+        <li onclick="loadSection('dessert')">DESSERT</li>
+      </ul>
+    </nav>
+
+    <div class="main-container">
+        <section class="content" id="menuContent"></section>
+        <a href="1937"><button class="order-btn">ORDER NOW</button></a>
+    </div>
+  </div>
+
+  
+
+  <footer class="main-content">
+    <div class="container">
+      <img src="assets/logos/footer logo.png" alt="Capt Loui Logo" class="footer-logo" />
+      <ul class="footer-nav">
+        <li><a href="locations.html">LOCATIONS</a></li>
+          <li><a href="nmenu.html">MENU</a></li>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><a href="franchise.html">FRANCHISE</a></li>
+          <li><a href="shop.html">SHOP</a></li>
+          <li><a href="contact.html">CONTACT US</a></li>
+      </ul>
+      <p>&copy; lorem lorem lorem</p>
+      <div class="social-icons">
+        <a href="#"><img src="assets/logos/facebook.png" alt="Facebook Icon" /></a>
+        <a href="#"><img src="assets/logos/insta.png" alt="Instagram Icon" /></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nmenu.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
